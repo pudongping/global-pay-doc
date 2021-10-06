@@ -57,7 +57,7 @@ app | APP 支付
 
 - getHbFqCost(float $totalAmount, bool $isShowAll = false, bool $isSellerPercent = false)  
   **说明：** 获取花呗分期计费情况  
-  **参数：** `$totalAmount` 为分期的本金，`$isShowAll` 为是否显示每一期的还款数，`$isSellerPercent` 为 `true` 表示商家承担全部手续费，为 `false` 表示用户承担全部手续费。
+  **参数：** `$totalAmount` 为分期的本金，`$isShowAll` 为是否显示每一期的还款数，`$isSellerPercent` 为 `true` 表示商家承担全部手续费，为 `false` 表示用户承担全部手续费。  
   **返回：** 获取成功，返回 `Illuminate\Support\Collection` 实例，可以通过 `$collection->toArray()` 或者 `$collection->all()` 或者 `$collection->get('field')` 访问服务器返回的数据。
 
 返回参数说明
