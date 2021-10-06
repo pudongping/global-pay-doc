@@ -14,6 +14,9 @@
     <!--  皮肤  -->
     <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">-->
 
+    <!-- 在每一页上显示'在线编辑' -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+
 </head>
 <body>
 <div id="app">加载中^_^</div>
@@ -22,13 +25,13 @@
         name: 'global-pay',  // 文档标题，会显示在侧边栏顶部
         nameLink: 'https://packagist.org/packages/pudongping/global-pay',  // 点击文档标题后跳转的链接地址
         loadSidebar: true,  // 定制侧边栏
-        // autoHeader: true,  // 根据 _sidebar.md 的内容自动为每个页面增加标题
         subMaxLevel: 4,  // 显示页面目录(当前页面的标题)
         coverpage: true,  // 设置封面
         // onlyCover: true,  // 把封面作为首页
         loadNavbar: true,  // 自定义导航栏
         mergeNavbar: false,  // 小屏设备下合并导航栏到侧边栏
-        // routerMode: 'history',  // 路由模式
+        auto2top: true,  // 切换页面后自动跳转到页面顶部
+        homepage: 'guide.md',  // 设置首页文件加载路径
         repo: 'pudongping/global-pay',  // 配置仓库地址
         search: {
             maxAge: 86400000,  // 过期时间，单位毫秒，默认一天
@@ -36,7 +39,10 @@
             placeholder: 'Type to search',  // 搜索提示框文字
             noData: 'No Results!',  // 找不到结果文字提示
             depth: 2,  // 搜索标题的最大程级, 1 - 6
-        }
+        },
+        plugins: [
+            EditOnGithubPlugin.create('https://github.com/pudongping/global-pay-doc/blob/master/docs/')
+        ]
     }
 </script>
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
@@ -53,6 +59,7 @@
 <!-- 代码高亮 -->
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+
 <!-- 评论插件 Gitalk -->
 <!--<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>-->
 <!--<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>-->
