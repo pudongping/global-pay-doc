@@ -9,7 +9,7 @@
   - [订单查询](/normal/find.md)
   - [退款](/normal/refund.md)
   - [验签](/normal/verify.md)
-- 蚂蚁花呗国际分期支付
+- 蚂蚁花呗分期国际支付
   - [支付](/hbfq/pay.md)
   - [订单查询](/hbfq/find.md)
   - [退款](/hbfq/refund.md)
