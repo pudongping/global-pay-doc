@@ -33,7 +33,7 @@ find | array $order | Illuminate\Support\Collection
     "sign_type" => "RSA",
     "params" => [
         "buyer_email" => "she***@126.com",
-        "buyer_id" => "2088212018580755",
+        "buyer_id" => "2088000000000000",
         "discount" => "0.00",
         "flag_trade_locked" => "0",
         "gmt_create" => "2021-09-18 16:12:07",
@@ -47,7 +47,7 @@ find | array $order | Illuminate\Support\Collection
         "price" => "0.45",
         "quantity" => "1",
         "seller_email" => "zik***@yahoo.co.jp",
-        "seller_id" => "2088011062799076",
+        "seller_id" => "20880000000000006",
         "seller_received_total_amount" => "0.00",
         "send_back_fee" => "0.00",
         "subject" => "交易 3331631952640",
