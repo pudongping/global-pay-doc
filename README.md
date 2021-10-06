@@ -2,7 +2,7 @@
 
 此仓库为 [global-pay](https://github.com/pudongping/global-pay) 国际支付宝支付 PHP SDK 的详细中文文档。
 
-[文档在线地址](pudongping.github.io/global-pay-doc)
+[文档在线地址](https://pudongping.github.io/global-pay-doc)
 
 ## 其他
 
