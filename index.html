@@ -59,7 +59,7 @@
 <!-- 评论插件 Gitalk -->
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/blueimp/JavaScript-MD5/js/md5.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/gh/blueimp/JavaScript-MD5/js/md5.min.js"></script>-->
 <script>
     const gitalk = new Gitalk({
         clientID: '8229322ed415187394b6',
@@ -67,10 +67,11 @@
         repo: 'global-pay-doc',
         owner: 'pudongping',
         admin: ['pudongping'],
+        id: location.pathname,
         // facebook-like distraction free mode
         distractionFreeMode: false,
         // id: Date.parse( new Date()) + '_alex'
-        id: md5(location.href)
+        // id: md5(location.href)
     })
 </script>
 </body>
