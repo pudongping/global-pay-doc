@@ -1,9 +1,14 @@
 <!-- 首页 -->
 <!-- python -m SimpleHTTPServer 3000  -->
 
-<h1 align="center"><a href="https://github.com/pudongping/global-pay">GlobalPay</a></h1>
 
-支持国际版支付的 PHP SDK，目前**只支持支付宝国际版**。因目前支付宝跨境在线支付服务只支持 app、wap、web 和报关这四种，本 SDK 提供了 app、wap、web 这三种跨境支付，[详见文档](https://global.alipay.com/docs/ac/legacy/legacydoc) 。
+<h1 align="center">GlobalPay</h1>
+
+支持国际版支付的 PHP SDK，目前**只支持支付宝国际版**。因目前支付宝跨境在线支付服务只支持 app、wap、web 和报关这四种，本 SDK 提供了 app、wap、web 这三种跨境支付，[详见支付宝国际支付官方文档](https://global.alipay.com/docs/ac/legacy/legacydoc) 。
+
+> 创建本仓库的初衷主要在于，本人目前所在单位有跨境支付的需求，之前境内支付一直采用 [yansongda/pay](https://github.com/yansongda/pay) 扩展包，也习惯了这种调用方式，但由于贵包暂时不支持境外支付，因此只能撸起袖子自己写一个了。
+> 本只想此扩展包供团队内部使用，但近期刚好也有朋友问我境外支付采用的什么扩展包，遂想着将此包开源出去，以供各位同学参考！如果发现此包有 bug，欢迎随时提 PR，希望各位同学使用愉快！  
+> 本扩展包里面的功能只打算以本人所在单位的需求为导向进行扩展，因此暂时只考虑跨境支付宝支付，其他暂且不考虑。
 
 ## 安装
 
@@ -11,11 +16,16 @@
 composer require pudongping/global-pay -vvv
 ```
 
+## 详细文档地址
+
+[https://pudongping.github.io/global-pay-doc](https://pudongping.github.io/global-pay-doc)
+
 ## 特点
 
 - 命名规范
 - 隐藏开发者不需要关注的细枝末节
 - 符合 PSR 规范，可以方便的与各种 PHP 框架集成
+- 使用方式简单，使用过 [yansongda/pay](https://github.com/yansongda/pay) 扩展包的用户可无缝上手
 
 ## 运行环境
 
@@ -24,21 +34,17 @@ composer require pudongping/global-pay -vvv
 
 ## 支持的支付方法
 
-### 支付宝
+- 境外支付宝电脑支付
+- 境外支付宝手机网站支付
+- 境外支付宝 APP 支付
 
-- 电脑支付
-- 手机网站支付
-- APP 支付
-
-method | 描述
+方法 | 描述
 :---: | :---:
 web | 电脑支付
 wap | 手机网站支付
 app | APP 支付
 
-## 支持的方法
-
-> 所有网关均支持以下方法
+## 所有支付方法都支持的方法
 
 - find(array|string $order)  
   **说明：** 查找订单接口  
@@ -481,7 +487,7 @@ class HbfqPayController
     {
         $totalAmount = 100.88;
 
-        // 只需要获取 3 6 12 期相对应的还款数
+        // 只需要获取 3 6 12 期相对应到还款数
         // $globalPay = GlobalPay::alipay($this->config)->getHbFqCost($totalAmount);
 
         // 获取 3 6 12 期相对应到还款数且显示出每一期的还款情况（用户承担所有的手续费）
@@ -496,6 +502,10 @@ class HbfqPayController
 }
 
 ```
+
+## 致谢
+
+本仓库架构思想借鉴于 「 [yansongda/pay](https://github.com/yansongda/pay) ：可能是我用过的最优雅的 Alipay 和 WeChat 的支付 SDK 扩展包了。」，感谢严大提供如此好用的 PHP 支付 SDK 扩展包。
 
 ## LICENSE
 MIT
